@@ -1,0 +1,82 @@
+export const hi = {
+  // Brand & General
+  brandName: 'डिजीदर्जी',
+  tagline: 'स्मार्ट डिजिटल टेलरिंग सिस्टम',
+  welcome: 'स्वागत है',
+  logout: 'साइन आउट',
+  login: 'लॉगिन',
+  signup: 'साइन अप',
+  roleSelection: 'अपना कार्यस्थान चुनें',
+
+  // Auth & Login
+  welcomeBack: 'वापसी पर स्वागत है!',
+  signInSubtitle: 'अपने डिजीदर्जी कार्यस्थान तक पहुँचने के लिए साइन इन करें',
+  username: 'उपयोगकर्ता नाम (Username)',
+  emailOrPhone: 'उपयोगकर्ता नाम (Username)',
+  password: 'पासवर्ड',
+  rememberMe: 'मुझे याद रखें',
+  forgotPassword: 'पासवर्ड भूल गए?',
+  signIn: 'साइन इन करें',
+  signingIn: 'साइन इन हो रहा है...',
+  orContinueWith: 'या जारी रखें',
+  dontHaveAccount: 'खाता नहीं है?',
+  alreadyHaveAccount: 'पहले से खाता है?',
+  createAccount: 'खाता बनाएं',
+  createAccountSubtitle: 'अपना डिजीदर्जी प्रोफाइल पंजीकृत करें',
+
+  // Roles
+  customer: 'ग्राहक',
+  tailor: 'दर्जी',
+  admin: 'प्रशासक',
+  customerWorkspace: 'ग्राहक कार्यस्थान',
+  tailorWorkspace: 'दर्जी कार्यस्थान',
+  adminWorkspace: 'प्रशासक कार्यस्थान',
+
+  // Navigation Sidebar
+  dashboard: 'डैशबोर्ड',
+  browseDresses: 'सभी कपड़े देखें',
+  menCollection: 'पुरुष संग्रह',
+  womenCollection: 'महिला संग्रह',
+  kidsCollection: 'बच्चे संग्रह',
+  traditionalCollection: 'पारंपरिक परिधान',
+  customDesign: 'कस्टम डिजाइन स्टूडियो',
+  measurements: 'शारीरिक माप',
+  myOrders: 'मेरे ऑर्डर',
+  wishlist: 'विशलिस्ट',
+  cart: 'कार्ट',
+  payment: 'भुगतान',
+  orderTracking: 'ऑर्डर ट्रैकिंग',
+  reviews: 'समीक्षाएं और रेटिंग',
+  notifications: 'सूचनाएं',
+  profile: 'प्रोफाइल',
+  settings: 'सेटिंग्स',
+
+  // Common Buttons
+  addToCart: 'कार्ट में जोड़ें',
+  viewDetails: 'विवरण देखें',
+  customize: 'कस्टमाइज़ करें और सिलाई करें',
+  save: 'सहेजें',
+  edit: 'संपादित करें',
+  delete: 'हटाएं',
+  cancel: 'रद्द करें',
+  proceedToCheckout: 'चेकआउट के लिए आगे बढ़ें',
+  payNow: 'अभी भुगतान करें',
+  trackOrder: 'ऑर्डर ट्रैक करें',
+
+  // Tailor & Production Statuses
+  orderPlaced: 'ऑर्डर दिया गया',
+  confirmed: 'पुष्टि की गई',
+  accepted: 'स्वीकृत',
+  tailorAssigned: 'दर्जी सौंपा गया',
+  cutting: 'कटाई',
+  stitching: 'सिलाई',
+  qualityCheck: 'गुणवत्ता जांच',
+  ready: 'तैयार',
+  outForDelivery: 'डिलीवरी के लिए निकला',
+  delivered: 'वितरित किया गया',
+
+  // Theme & Language
+  lightMode: 'लाइट मोड',
+  darkMode: 'डार्क मोड',
+  language: 'भाषा',
+};

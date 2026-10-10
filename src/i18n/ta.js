@@ -1,0 +1,82 @@
+export const ta = {
+  // Brand & General
+  brandName: 'டிஜிட்டெய்லர்',
+  tagline: 'ஸ்மார்ட் டிஜிட்டல் தையல் அமைப்பு',
+  welcome: 'வரவேற்கிறோம்',
+  logout: 'வெளியேறு',
+  login: 'உள்நுழைவு',
+  signup: 'பதிவு செய்க',
+  roleSelection: 'உங்கள் பணியிடத்தை தேர்ந்தெடுக்கவும்',
+
+  // Auth & Login
+  welcomeBack: 'மீண்டும் வரவேற்கிறோம்!',
+  signInSubtitle: 'உங்கள் டிஜிட்டெய்லர் பணியிடத்தை அணுக உள்நுழையவும்',
+  username: 'பயனர்பெயர் (Username)',
+  emailOrPhone: 'பயனர்பெயர் (Username)',
+  password: 'கடவுச்சொல்',
+  rememberMe: 'என்னை நினைவில் கொள்க',
+  forgotPassword: 'கடவுச்சொல்லை மறந்துவிட்டீர்களா?',
+  signIn: 'உள்நுழைக',
+  signingIn: 'உள்நுழைகிறது...',
+  orContinueWith: 'அல்லது தொடரவும்',
+  dontHaveAccount: 'கணக்கு இல்லையா?',
+  alreadyHaveAccount: 'ஏற்கனவே கணக்கு உள்ளதா?',
+  createAccount: 'கணக்கை உருவாக்கு',
+  createAccountSubtitle: 'உங்கள் டிஜிட்டெய்லர் சுயவிவரத்தை பதிவு செய்யவும்',
+
+  // Roles
+  customer: 'வாடிக்கையாளர்',
+  tailor: 'தையல்காரர்',
+  admin: 'நிர்வாகி',
+  customerWorkspace: 'வாடிக்கையாளர் பணியிடம்',
+  tailorWorkspace: 'தையல்காரர் பணியிடம்',
+  adminWorkspace: 'நிர்வாக பணியிடம்',
+
+  // Navigation Sidebar
+  dashboard: 'டாஷ்போர்டு',
+  browseDresses: 'அனைத்து ஆடைகளையும் காண்க',
+  menCollection: 'ஆண்கள் கலெக்ஷன்',
+  womenCollection: 'பெண்கள் கலெக்ஷன்',
+  kidsCollection: 'குழந்தைகள் கலெக்ஷன்',
+  traditionalCollection: 'பாரம்பரிய உடைகள்',
+  customDesign: 'கஸ்டம் டிசைன் ஸ்டுடியோ',
+  measurements: 'உடல் அளவுகள்',
+  myOrders: 'எனது ஆர்டர்கள்',
+  wishlist: 'விருப்பப் பட்டியல்',
+  cart: 'கார்ட்',
+  payment: 'கட்டணம்',
+  orderTracking: 'ஆர்டர் டிராக்கிங்',
+  reviews: 'மதிப்பாய்வு & மதிப்பீடுகள்',
+  notifications: 'அறிவிப்புகள்',
+  profile: 'சுயவிவரம்',
+  settings: 'அமைப்புகள்',
+
+  // Common Buttons
+  addToCart: 'கார்ட்டில் சேர்',
+  viewDetails: 'விவரங்களை காண்க',
+  customize: 'தனிப்பயனாக்கி தைக்கவும்',
+  save: 'சேமி',
+  edit: 'திருத்து',
+  delete: 'நீக்கு',
+  cancel: 'ரத்துசெய்',
+  proceedToCheckout: 'செக்அவுட் தொடரவும்',
+  payNow: 'இப்போது செலுத்து',
+  trackOrder: 'ஆர்டரை டிராக் செய்',
+
+  // Tailor & Production Statuses
+  orderPlaced: 'ஆர்டர் செய்யப்பட்டது',
+  confirmed: 'உறுதி செய்யப்பட்டது',
+  accepted: 'ஏற்றுக்கொள்ளப்பட்டது',
+  tailorAssigned: 'தையல்காரர் ஒதுக்கப்பட்டார்',
+  cutting: 'வெட்டுதல்',
+  stitching: 'தைத்தல்',
+  qualityCheck: 'தர பரிசோதனை',
+  ready: 'தயார்',
+  outForDelivery: 'டெலிவரிக்கு அனுப்பப்பட்டது',
+  delivered: 'டெலிவரி செய்யப்பட்டது',
+
+  // Theme & Language
+  lightMode: 'லைட் மோட்',
+  darkMode: 'டேர்க் மோட்',
+  language: 'மொழி',
+};

@@ -1,0 +1,82 @@
+export const en = {
+  // Brand & General
+  brandName: 'DIGITAILOR',
+  tagline: 'SMART DIGITAL TAILORING SYSTEM',
+  welcome: 'Welcome',
+  logout: 'Sign Out',
+  login: 'Login',
+  signup: 'Sign Up',
+  roleSelection: 'Choose Your Workspace',
+
+  // Auth & Login
+  welcomeBack: 'Welcome Back!',
+  signInSubtitle: 'Sign in to access your DigiTailor workspace',
+  username: 'Username',
+  emailOrPhone: 'Username',
+  password: 'Password',
+  rememberMe: 'Remember Me',
+  forgotPassword: 'Forgot Password?',
+  signIn: 'Sign In',
+  signingIn: 'Signing you in...',
+  orContinueWith: 'or continue with',
+  dontHaveAccount: "Don't have an account?",
+  alreadyHaveAccount: 'Already have an account?',
+  createAccount: 'Create Account',
+  createAccountSubtitle: 'Register your DigiTailor workspace profile',
+
+  // Roles
+  customer: 'Customer',
+  tailor: 'Tailor',
+  admin: 'Admin',
+  customerWorkspace: 'Customer Workspace',
+  tailorWorkspace: 'Tailor Workspace',
+  adminWorkspace: 'Admin Workspace',
+
+  // Navigation Sidebar
+  dashboard: 'Dashboard',
+  browseDresses: 'Browse All Dresses',
+  menCollection: 'Men Collection',
+  womenCollection: 'Women Collection',
+  kidsCollection: 'Kids Collection',
+  traditionalCollection: 'Traditional Collection',
+  customDesign: 'Custom Design Studio',
+  measurements: 'Body Measurements',
+  myOrders: 'My Orders',
+  wishlist: 'Wishlist',
+  cart: 'Cart',
+  payment: 'Payment',
+  orderTracking: 'Order Tracking',
+  reviews: 'Reviews & Ratings',
+  notifications: 'Notifications',
+  profile: 'Profile',
+  settings: 'Settings',
+
+  // Common Buttons
+  addToCart: 'Add to Cart',
+  viewDetails: 'View Details',
+  customize: 'Customize & Stitch',
+  save: 'Save',
+  edit: 'Edit',
+  delete: 'Delete',
+  cancel: 'Cancel',
+  proceedToCheckout: 'Proceed to Checkout',
+  payNow: 'Pay Now',
+  trackOrder: 'Track Order',
+
+  // Tailor & Production Statuses
+  orderPlaced: 'Order Placed',
+  confirmed: 'Confirmed',
+  accepted: 'Accepted',
+  tailorAssigned: 'Tailor Assigned',
+  cutting: 'Cutting',
+  stitching: 'Stitching',
+  qualityCheck: 'Quality Check',
+  ready: 'Ready',
+  outForDelivery: 'Out for Delivery',
+  delivered: 'Delivered',
+
+  // Theme & Language
+  lightMode: 'Light Mode',
+  darkMode: 'Dark Mode',
+  language: 'Language',
+};
