@@ -168,6 +168,7 @@ const authController = {
   },
 
   googleLogin: async (req, res) => {
+    console.log('[Backend] googleLogin hit! req.body:', { ...req.body, credential: req.body.credential ? 'PRESENT' : 'MISSING', idToken: req.body.idToken ? 'PRESENT' : 'MISSING' });
     try {
       const { credential, idToken, googleId, email, name, profileImage } = req.body;
       let targetGoogleId = googleId;
@@ -181,18 +182,20 @@ const authController = {
       if (tokenToVerify) {
         if (clientId && clientId !== 'YOUR_GOOGLE_CLIENT_ID_HERE' && OAuth2Client) {
           try {
+            console.log('[Backend] Verifying token with google-auth-library');
             const client = new OAuth2Client(clientId);
             const ticket = await client.verifyIdToken({
               idToken: tokenToVerify,
               audience: clientId,
             });
             const payload = ticket.getPayload();
+            console.log('[Backend] Token verified! payload email:', payload.email);
             targetGoogleId = payload.sub;
             targetEmail = payload.email;
             targetName = payload.name || targetName || payload.email.split('@')[0];
             targetImage = payload.picture || targetImage;
           } catch (verifyErr) {
-            console.warn('[Google OAuth Token Verify Warning]', verifyErr.message);
+            console.warn('[Backend] Google OAuth Token Verify Warning:', verifyErr.message);
             try {
               const decoded = jwt.decode(tokenToVerify);
               if (decoded) {
@@ -204,6 +207,7 @@ const authController = {
             } catch (e) {}
           }
         } else {
+          console.warn('[Backend] Skipping verification, using jwt.decode directly. Missing ClientID or OAuth2Client.');
           try {
             const decoded = jwt.decode(tokenToVerify);
             if (decoded) {

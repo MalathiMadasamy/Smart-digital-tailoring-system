@@ -12,11 +12,14 @@ export async function apiFetch(endpoint, options = {}) {
   try {
     const response = await fetch(`${API_BASE_URL}${endpoint}`, { ...options, headers });
     if (!response.ok) {
+      const errData = await response.json().catch(() => null);
+      if (errData && errData.message) throw new Error(errData.message);
       throw new Error(`API HTTP Error: ${response.status}`);
     }
     return await response.json();
   } catch (error) {
     console.warn(`[DigiTailor Service Layer] Backend offline or endpoint ${endpoint} unreachable. Using demo fallback mode.`, error.message);
+    if (endpoint.includes('/auth')) throw error;
     return null; // Signals caller to use seamless fallback
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import './style.css';
 import { BrowserRouter, Routes, Route, Navigate } from './router/Router.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
@@ -119,4 +120,10 @@ function App() {
   );
 }
 
-createRoot(document.getElementById('root')).render(<App />);
+const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || 'YOUR_GOOGLE_CLIENT_ID_HERE';
+
+createRoot(document.getElementById('root')).render(
+  <GoogleOAuthProvider clientId={googleClientId}>
+    <App />
+  </GoogleOAuthProvider>
+);

@@ -11,7 +11,6 @@ const { initSocket } = require('./src/socket');
 
 // Load environment variables safely
 dotenv.config();
-dotenv.config({ path: path.join(__dirname, '../.env') });
 
 const app = express();
 const server = http.createServer(app);
