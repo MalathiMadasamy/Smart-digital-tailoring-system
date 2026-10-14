@@ -5,10 +5,10 @@
  * ============================================================================
  */
 
-import blousePinkPearl from 'C:/Users/malat/.gemini/antigravity/brain/694de282-717f-4298-92dd-9aa3dcf4345a/.user_uploaded/media_1789637413468.png';
-import lehengaMagenta from 'C:/Users/malat/.gemini/antigravity/brain/694de282-717f-4298-92dd-9aa3dcf4345a/.user_uploaded/media_1789637428600.png';
-import anarkaliLavender from 'C:/Users/malat/.gemini/antigravity/brain/694de282-717f-4298-92dd-9aa3dcf4345a/.user_uploaded/media_1789637464106.png';
-import halfSareePurple from 'C:/Users/malat/.gemini/antigravity/brain/694de282-717f-4298-92dd-9aa3dcf4345a/.user_uploaded/media_1789637511013.png';
+import blousePinkPearl from '../assets/dresses/blouse/blouse-01.png';
+import lehengaMagenta from '../assets/dresses/lehenga/lehenga-01.png';
+import anarkaliLavender from '../assets/dresses/anarkali/anarkali-01.png';
+import halfSareePurple from '../assets/dresses/saree/saree-01.png';
 
 export const ALL_PRODUCTS = [
   {

@@ -56,20 +56,30 @@ app.get('*', (req, res, next) => {
   if (req.path.startsWith('/api')) return next();
   
   const distIndex = path.join(__dirname, '../dist/index.html');
+  const frontendDistIndex = path.join(__dirname, '../frontend/dist/index.html');
   if (fs.existsSync(distIndex)) {
     return res.sendFile(distIndex);
   }
+  if (fs.existsSync(frontendDistIndex)) {
+    return res.sendFile(frontendDistIndex);
+  }
+
+  const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
 
   res.send(`
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Smart Digital Tailoring System - Unified Server</title>
+        <title>Smart Digital Tailoring System - Backend API</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
           body { font-family: system-ui, -apple-system, sans-serif; background: #120b10; color: #fff; text-align: center; padding: 60px 20px; line-height: 1.6; }
           .card { max-width: 650px; margin: 0 auto; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-radius: 28px; padding: 40px; box-shadow: 0 25px 60px rgba(0,0,0,0.5); }
           .badge { display: inline-block; background: #22c55e22; color: #4ade80; border: 1px solid #22c55e55; padding: 6px 18px; border-radius: 20px; font-weight: bold; font-size: 13px; margin-bottom: 20px; }
-          .btn { display: inline-block; background: linear-gradient(135deg, #d76578, #e88a9a); color: #fff; padding: 14px 32px; border-radius: 30px; font-weight: bold; text-decoration: none; box-shadow: 0 10px 25px rgba(215,101,120,0.4); margin-top: 20px; }
+          .btn { display: inline-block; background: linear-gradient(135deg, #d76578, #e88a9a); color: #fff; padding: 14px 32px; border-radius: 30px; font-weight: bold; text-decoration: none; box-shadow: 0 10px 25px rgba(215,101,120,0.4); margin-top: 20px; transition: transform 0.2s; }
+          .btn:hover { transform: scale(1.03); }
+          .endpoints { text-align: left; background: rgba(0,0,0,0.3); border-radius: 12px; padding: 15px; margin-top: 25px; font-size: 13px; }
+          .endpoints a { color: #ff80ab; }
         </style>
       </head>
       <body>
@@ -78,7 +88,13 @@ app.get('*', (req, res, next) => {
           <div class="badge">${config.getIsConnected() ? '✅ MongoDB Atlas Connected' : '⚠️ Fallback Mode Active'}</div>
           <p>Full-Stack Tailoring Platform: <b>Client Frontend + Express REST API + Real-Time Socket.IO + MongoDB Database</b> connected together!</p>
           <p>Click below to launch your full website interface:</p>
-          <a href="http://localhost:5173" class="btn">👉 Launch Full Website (http://localhost:5173)</a>
+          <a href="${frontendUrl}" class="btn">👉 Launch Full Website (${frontendUrl})</a>
+          
+          <div class="endpoints">
+            <b>Live Backend Endpoints:</b><br>
+            • Health Status: <a href="/api/health">/api/health</a><br>
+            • Tailoring Products: <a href="/api/v1/products">/api/v1/products</a>
+          </div>
         </div>
       </body>
     </html>

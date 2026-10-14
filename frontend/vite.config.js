@@ -4,32 +4,6 @@ import https from 'https';
 import fs from 'fs';
 import path from 'path';
 
-// Copy user-uploaded traditional dress photos to public/images/traditional
-function ensureUserTraditionalImages() {
-  const targetDir = path.join(process.cwd(), 'public/images/traditional');
-  if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir, { recursive: true });
-
-  const imagesToCopy = [
-    { src: 'C:/Users/malat/.gemini/antigravity/brain/694de282-717f-4298-92dd-9aa3dcf4345a/.user_uploaded/media_1788703739705.png', dest: 'purple_cutwork_blouse.png' },
-    { src: 'C:/Users/malat/.gemini/antigravity/brain/694de282-717f-4298-92dd-9aa3dcf4345a/.user_uploaded/media_1788703759926.png', dest: 'yellow_green_pavadai_thavani.png' },
-    { src: 'C:/Users/malat/.gemini/antigravity/brain/694de282-717f-4298-92dd-9aa3dcf4345a/.user_uploaded/media_1788703857182.png', dest: 'kalamkari_half_saree.png' },
-    { src: 'C:/Users/malat/.gemini/antigravity/brain/694de282-717f-4298-92dd-9aa3dcf4345a/.user_uploaded/media_1788703999558.png', dest: 'cream_red_anarkali_gown.png' },
-    { src: 'C:/Users/malat/.gemini/antigravity/brain/694de282-717f-4298-92dd-9aa3dcf4345a/.user_uploaded/media_1788704094551.png', dest: 'mustard_black_salwar_kameez.png' },
-  ];
-
-  imagesToCopy.forEach((item) => {
-    try {
-      if (fs.existsSync(item.src)) {
-        fs.copyFileSync(item.src, path.join(targetDir, item.dest));
-      }
-    } catch (e) {
-      console.error(`Error copying ${item.dest}:`, e);
-    }
-  });
-}
-
-// Execute copy immediately
-ensureUserTraditionalImages();
 
 const QUERY_NORMALIZATION_MAP = {
   chudidar: 'chudidar',
